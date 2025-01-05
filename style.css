@@ -4,7 +4,7 @@
   --bg-color: #141414;
   --second-bg-color: #101a25;
   --text-color: #ffffff;
-  --main-color: #ff9900;
+  --main-color:  #8519ff;
 }
 * {
   margin: 0;
@@ -136,6 +136,8 @@ section {
   border-radius: 10px;
   margin: 2rem 5rem 3rem 0;
   transition: 0.5s ease;
+  position: relative;
+    z-index: 10;
 
 }
 
@@ -157,11 +159,16 @@ section {
   margin-top: 30px;
   font-weight: 600;
   transition: 0.5s ease;
+  position: relative;
+    z-index: 10;
 }
 
 .btn:hover {
   box-shadow: none;
 }
+
+
+
 
 /*-------------------------------About Me------------------------------------------*/
 
@@ -170,14 +177,54 @@ section {
   text-align: center;
 }
 
-
-.about-img img {
-  width: 30vw;
-  border-radius:40%;
-  margin-left: 3%;
-  margin-bottom: 4rem;
-
+.about-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 8rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 20px;
 }
+
+.biography, .contact, .education {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.biography {
+  flex: 2;
+  min-width: 300px;
+}
+
+.contact, .education {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.about-container .skills {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.about-container .skills span {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
 
 .about {
   display: flex;
@@ -377,15 +424,22 @@ p {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
   justify-items: center;
+  padding: 30px; /* Ensure no padding on container */
 }
 
 .project-card {
+  width: 100%; /* Adjust to fit more cards */
+  height: 95%; /* Adjust height as needed */
   background-color: #1e293b;
   border-radius: 15px;
   overflow: hidden;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   cursor: pointer;
+  box-shadow: 0 0 20px var(--main-color); /* Outer glow */
+  margin-left: 100px; /* Ensure no margin */
+  box-sizing: border-box; /* Ensure padding/borders don’t add to size */
 }
+
 
 .project-card img {
   width: 100%;
@@ -394,7 +448,7 @@ p {
 }
 
 .project-card .overlay {
-  /*position: absolute;*/
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -408,7 +462,7 @@ p {
 }
 
 .project-card .overlay .text {
-  color:var(--main-color);
+  color:var(--text-color);
   font-weight: 700;
   background-color: transparent;
   border: 2px solid var(--main-color);
@@ -422,7 +476,7 @@ p {
 .project-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-  border: 2px solid white;
+  box-shadow: 0 0 20px var(--main-color); /* Outer glow */
 }
 
 .project-card:hover img {
@@ -430,6 +484,75 @@ p {
 }
 
 .project-card:hover .overlay {
+  opacity: 1;
+}
+
+
+.projects-container2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  padding: 10px; /* Ensure no padding on container */
+}
+
+.project-card2 {
+  width: 100%; /* Adjust to fit more cards */
+  height: 100%; /* Adjust height as needed */
+  background-color: #1e293b;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0 0 20px var(--main-color); /* Outer glow */
+  margin: 0; /* Ensure no margin */
+  box-sizing: border-box; /* Ensure padding/borders don’t add to size */
+}
+
+
+.project-card2 img {
+  width: 100%;
+  display: block;
+  
+}
+
+
+.project-card2 .overlay {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-card2 .overlay .text {
+  color:var(--main-color);
+  font-weight: 700;
+  background-color: transparent;
+  border: 2px solid var(--main-color);
+  border-radius: 30px;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+}
+
+
+.project-card2:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 20px var(--main-color); /* Outer glow */
+}
+
+.project-card2:hover img {
+  filter: brightness(1.2);
+}
+
+.project-card2:hover .overlay {
   opacity: 1;
 }
 
