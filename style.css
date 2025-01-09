@@ -411,7 +411,8 @@ p {
 }
 .projects-section h3 {
   font-size: 3em;
-  margin-right: 130rem;
+  white-space: nowrap; /* Prevent wrapping */
+  margin-right: 120rem;
   margin-bottom: 4rem;
 }
 
@@ -421,7 +422,7 @@ p {
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
   gap: 20px;
   justify-items: center;
   padding: 30px; /* Ensure no padding on container */
@@ -429,14 +430,13 @@ p {
 
 .project-card {
   width: 100%; /* Adjust to fit more cards */
-  height: 95%; /* Adjust height as needed */
+  height: 100%; /* Adjust height as needed */
   background-color: #1e293b;
   border-radius: 15px;
   overflow: hidden;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   cursor: pointer;
-  box-shadow: 0 0 20px var(--main-color); /* Outer glow */
-  margin-left: 100px; /* Ensure no margin */
+ /* Ensure no margin */
   box-sizing: border-box; /* Ensure padding/borders don’t add to size */
 }
 
@@ -476,7 +476,7 @@ p {
 .project-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 20px var(--main-color); /* Outer glow */
+  box-shadow: 0 0 10px var(--main-color); /* Outer glow */
 }
 
 .project-card:hover img {
@@ -554,6 +554,42 @@ p {
 
 .project-card2:hover .overlay {
   opacity: 1;
+}
+
+.project-details {
+  padding: 15px;
+  text-align: center;
+}
+
+.project-details .title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.project-details .description {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.project-details a {
+  text-decoration: none;
+  color: var(--main-color);
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+  border: 1px solid var(--text-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: var(--text-color);
+  transition: background-color 0.3s ease;
+}
+
+.project-details a:hover {
+  background-color: var(--main-color);
+  color:var(--text-color);
 }
 
 
@@ -731,6 +767,7 @@ section {
 }
 
 @media(max-width: 768px) {
+  
   #menu-icon{
     display: block;
   }
@@ -767,7 +804,7 @@ section {
 }
 
 .home-content h3 {
-  font-size: 2.6rem;
+  font-size: 2.5rem;
  }
 
 .home-content h1 {
