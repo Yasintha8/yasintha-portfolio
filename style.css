@@ -839,7 +839,7 @@ section {
 
 @media(max-width: 450px) {
   .home-img img {
-    width: 90px;
+    width: 250px;
   }
   .footer {
     flex-direction: column-reverse;
