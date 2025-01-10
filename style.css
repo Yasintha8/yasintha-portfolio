@@ -844,6 +844,10 @@ section {
   .footer {
     flex-direction: column-reverse;
   }
+
+  .about-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 }
