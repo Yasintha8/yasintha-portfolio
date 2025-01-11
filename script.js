@@ -8,7 +8,7 @@ menuIcon.onclick = () => {
 
 
 const typed = new Typed(".text", {
-  strings: ["Web Developer", " Web Designer"],
+  strings: ["Web Developer", " UI/UX Designer"],
   typeSpeed: 90,
   backSpeed: 100,
   backDelay:1000,
