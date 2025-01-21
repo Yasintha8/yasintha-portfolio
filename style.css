@@ -872,6 +872,18 @@ section {
     grid-template-columns: 1fr;
   }
 
+  .contact .icon-container {
+    background-color: #222;
+    color: var(--main-color);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    margin-left: 42%;
+    align-items: center;
+    justify-content: center;
+  }
+
   
 }
 
