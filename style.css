@@ -653,7 +653,7 @@ p {
 
 .animate-project {
   display: inline-block;
-  font-size: 4.5rem;
+  font-size: 2rem;
   font-weight: bold;
   opacity: 0; /* Initially hidden */
   transform: translateX(-100%); /* Start off-screen */
@@ -773,6 +773,18 @@ section {
 
 @media(max-width: 768px) {
 
+  .contact .icon-container {
+    background-color: #222;
+    color: var(--main-color);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    margin-left: 42%;
+    align-items: center;
+    justify-content: center;
+  }
+
   #menu-icon{
     display: block;
   }
@@ -845,6 +857,8 @@ section {
     font-size: 50%;
   }
 
+  
+
 @media(max-width: 450px) {
   .home-img img {
     width: 250px;
@@ -857,6 +871,8 @@ section {
   .about-container {
     grid-template-columns: 1fr;
   }
+
+  
 }
 
 }
