@@ -857,8 +857,6 @@ section {
     font-size: 50%;
   }
 
-  
-
 @media(max-width: 450px) {
   .home-img img {
     width: 250px;
@@ -869,6 +867,10 @@ section {
   }
 
   .about-container {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-container {
     grid-template-columns: 1fr;
   }
 
@@ -883,9 +885,6 @@ section {
     align-items: center;
     justify-content: center;
   }
-
-  
 }
-
 }
 
