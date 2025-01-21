@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 entry.target.classList.remove('visible'); // Remove the class when the element is out of view
             }
         });
-    }, { threshold: 0.4 }); // Trigger when 50% of the section is visible
+    }, { threshold: 0.2 }); // Trigger when 50% of the section is visible
   
     observer.observe(target);
   });
